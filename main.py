@@ -15,7 +15,7 @@ import random
 #         print(hads)
 #         javab = input('آیا درسته ؟')
 
-def gamer(a, b, j) -> int:
+def gamer(a, b, j) -> str:
     count = 0
     hads = random.randint(a, b)
     print(hads)
@@ -44,10 +44,10 @@ def gamer(a, b, j) -> int:
         else:
             javab = 'd'
 
-    return count +1
+    return count + 1
 
 
 a = int(input("a: "))
 b = int(input("B: "))
 j = int(input("j: "))
-print(gamer(a, b, j))
+print("count : ", gamer(a, b, j))
