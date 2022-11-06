@@ -16,8 +16,10 @@ import random
 #         javab = input('آیا درسته ؟')
 
 def gamer(a, b, j) -> str:
+    randList = []
     count = 0
     hads = random.randint(a, b)
+    randList.append(hads)
     print(hads)
 
     if hads > j:
@@ -36,13 +38,14 @@ def gamer(a, b, j) -> str:
             count += 1
 
         hads = random.randint(a, b)
-        print(hads)
-        if hads > j:
-            javab = 'k'
-        elif hads < j:
-            javab = 'b'
-        else:
-            javab = 'd'
+        if hads not in randList:
+            print(hads)
+            if hads > j:
+                javab = 'k'
+            elif hads < j:
+                javab = 'b'
+            else:
+                javab = 'd'
 
     return count + 1
 
